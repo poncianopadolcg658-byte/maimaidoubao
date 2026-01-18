@@ -1,0 +1,139 @@
+{
+  "manifest_version": 1,
+  "name": "doubao_video_generator",
+  "description": "使用豆包API生成视频，支持多种视频参数配置",
+  "version": "2.0.0",
+  "author": "MaiBot",
+  "configs": [
+    {
+      "key": "api.api_key",
+      "name": "API密钥",
+      "type": "text",
+      "default": "",
+      "required": true,
+      "description": "豆包API密钥，从火山方舟控制台获取"
+    },
+    {
+      "key": "api.api_base",
+      "name": "API基础地址",
+      "type": "text",
+      "default": "https://ark.cn-beijing.volces.com/api/v3",
+      "required": true,
+      "description": "API基础地址，默认火山方舟北京区域"
+    },
+    {
+      "key": "api.model_id",
+      "name": "视频生成模型ID",
+      "type": "text",
+      "default": "doubao-seedance-1-5-pro-251215",
+      "required": true,
+      "description": "视频生成模型ID，支持：doubao-seedance-1-0-pro-250528, doubao-seedance-1-5-pro-251215, doubao-seedance-1-0-lite-i2v-250428"
+    },
+    {
+      "key": "video.ratio",
+      "name": "视频宽高比",
+      "type": "select",
+      "options": ["16:9", "4:3", "1:1", "9:16", "3:4", "adaptive"],
+      "default": "16:9",
+      "required": false,
+      "description": "视频宽高比"
+    },
+    {
+      "key": "video.duration",
+      "name": "视频时长",
+      "type": "number",
+      "default": 5,
+      "required": false,
+      "description": "视频时长（秒），不同模型支持的范围不同"
+    },
+    {
+      "key": "video.watermark",
+      "name": "添加水印",
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "是否添加水印"
+    },
+    {
+      "key": "video.return_last_frame",
+      "name": "返回尾帧",
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "是否返回视频尾帧图像"
+    },
+    {
+      "key": "video.generate_audio",
+      "name": "生成音频",
+      "type": "boolean",
+      "default": true,
+      "required": false,
+      "description": "是否生成音频"
+    },
+    {
+      "key": "video.draft",
+      "name": "生成样片",
+      "type": "boolean",
+      "default": false,
+      "required": false,
+      "description": "是否生成样片（快速预览）"
+    },
+    {
+      "key": "settings.max_wait_time",
+      "name": "最大等待时间",
+      "type": "number",
+      "default": 600,
+      "required": false,
+      "description": "最大等待时间（秒）"
+    },
+    {
+      "key": "settings.poll_interval",
+      "name": "查询间隔",
+      "type": "number",
+      "default": 30,
+      "required": false,
+      "description": "状态查询间隔（秒）"
+    },
+    {
+      "key": "settings.download_dir",
+      "name": "下载目录",
+      "type": "text",
+      "default": "",
+      "required": false,
+      "description": "视频下载目录"
+    },
+    {
+      "key": "settings.keep_video_files",
+      "name": "保留视频文件",
+      "type": "boolean",
+      "default": true,
+      "required": false,
+      "description": "是否保留下载的视频文件"
+    },
+    {
+      "key": "settings.auto_download",
+      "name": "自动下载",
+      "type": "boolean",
+      "default": true,
+      "required": false,
+      "description": "是否自动下载视频到本地"
+    },
+    {
+      "key": "napcat.port",
+      "name": "Napcat API端口",
+      "type": "number",
+      "default": 8090,
+      "required": false,
+      "description": "Napcat API端口"
+    },
+    {
+      "key": "napcat.token",
+      "name": "Napcat API Token",
+      "type": "text",
+      "default": "",
+      "required": false,
+      "description": "Napcat API Token"
+    }
+  ],
+  "id": "MaiBot.doubao_video_generator"
+}
