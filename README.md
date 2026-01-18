@@ -205,7 +205,7 @@ logs/plugin.doubao_video_generator.log
   - doubao-seedance-1-0-pro-250528 (基础视频生成模型)
   - doubao-seedance-1-5-pro-251215 (高级视频生成模型，支持音频生成和图像输入)
   - doubao-seedance-1-0-lite-i2v-250428 (轻量级图生视频模型)
-- 插件作者：MaiBot
+- 插件作者：landisha
 - 插件描述：使用豆包API生成视频，支持多种视频参数配置和多种发送方式
 
 ## 注意事项
@@ -214,3 +214,4 @@ logs/plugin.doubao_video_generator.log
 2. 生成的视频文件可能较大，请确保有足够的存储空间
 3. 使用Napcat发送大文件时可能会出现超时，建议适当调整超时设置
 4. 请遵守相关法律法规，不要生成或传播违法内容
+
